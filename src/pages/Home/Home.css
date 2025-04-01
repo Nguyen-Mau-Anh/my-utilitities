@@ -1,0 +1,69 @@
+.home-container {
+  padding: var(--spacing-md);
+}
+
+.home-description {
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-secondary);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+.tool-card {
+  background-color: var(--background-secondary);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tool-card-icon {
+  margin-bottom: var(--spacing-md);
+  color: var(--primary);
+  background-color: rgba(100, 108, 255, 0.1);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool-card h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-sm);
+}
+
+.tool-card p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 576px) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 992px) {
+  .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

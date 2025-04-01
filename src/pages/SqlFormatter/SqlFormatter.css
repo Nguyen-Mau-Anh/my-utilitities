@@ -1,0 +1,219 @@
+.sql-formatter-container {
+  padding: var(--spacing-md);
+}
+
+.tool-description {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.format-controls {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.control-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.control-item select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+}
+
+.action-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.action-buttons button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
+
+.action-buttons button:hover {
+  background-color: var(--primary-hover);
+}
+
+.editor-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+.editor-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-section h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-sm);
+}
+
+.sql-editor, .sql-output {
+  width: 100%;
+  min-height: 300px;
+  padding: var(--spacing-md);
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+  font-family: monospace;
+  resize: vertical;
+}
+
+.sql-output {
+  white-space: pre-wrap;
+  overflow-x: auto;
+  margin: 0;
+}
+
+.output-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--spacing-xs);
+}
+
+.copy-button {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--secondary);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.copy-button:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.error-message {
+  color: #ff6b6b;
+  padding: var(--spacing-md);
+  border: 1px solid #ff6b6b;
+  border-radius: 4px;
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+/* Analysis styles */
+.analysis-container {
+  margin-top: var(--spacing-lg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--background-secondary);
+  overflow: hidden;
+}
+
+.analysis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  background-color: var(--background-tertiary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.analysis-header h3 {
+  margin: 0;
+}
+
+.toggle-button {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.toggle-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.analysis-content {
+  padding: var(--spacing-md);
+}
+
+.analysis-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.analysis-section h4 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-sm);
+  color: var(--primary);
+}
+
+.tables-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.table-item {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.table-name {
+  padding: var(--spacing-sm);
+  background-color: var(--background-tertiary);
+  font-weight: bold;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table-fields {
+  padding: var(--spacing-sm);
+}
+
+.table-fields ul {
+  margin: 0;
+  padding-left: var(--spacing-md);
+}
+
+.table-fields li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.query-tree, .query-complexity {
+  background-color: var(--background-tertiary);
+  padding: var(--spacing-md);
+  border-radius: 4px;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 768px) {
+  .editor-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}

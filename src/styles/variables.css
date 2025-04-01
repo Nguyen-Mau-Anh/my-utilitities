@@ -1,0 +1,38 @@
+:root {
+  /* Theme Colors */
+  --primary: #646cff;
+  --primary-hover: #535bf2;
+  --secondary: #1a1a1a;
+  --text-primary: rgba(255, 255, 255, 0.87);
+  --text-secondary: #888;
+  --background-primary: #242424;
+  --background-secondary: #1a1a1a;
+  --border-color: #3f3f3f;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  
+  /* Transitions */
+  --transition-speed: 0.3s;
+  
+  /* Breakpoints */
+  --breakpoint-mobile: 576px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 992px;
+}
+
+/* Light Theme Variables */
+[data-theme="light"] {
+  --primary: #646cff;
+  --primary-hover: #535bf2;
+  --secondary: #f9f9f9;
+  --text-primary: #213547;
+  --text-secondary: #555;
+  --background-primary: #ffffff;
+  --background-secondary: #f9f9f9;
+  --border-color: #e0e0e0;
+}
