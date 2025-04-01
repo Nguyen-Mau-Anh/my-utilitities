@@ -118,3 +118,8 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+
+.json-output {
+  height: 300px;
+  overflow-y: auto;
+}

@@ -53,6 +53,7 @@ const Sidebar = ({ isOpen, toggleTheme, currentTheme }: SidebarProps) => {
         </ul>
       </nav>
       <div className="sidebar-footer">
+        <p>Author: Anh, Nguyen</p>
         <p>© 2025 Utility Tools</p>
       </div>
     </aside>

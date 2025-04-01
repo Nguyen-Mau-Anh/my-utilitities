@@ -86,6 +86,8 @@
 .sql-output {
   white-space: pre-wrap;
   overflow-x: auto;
+  overflow-y: auto;
+  height: 300px;
   margin: 0;
 }
 
@@ -216,4 +218,9 @@
   .editor-container {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+output {
+  height: 300px;
+  overflow-y: auto;
 }

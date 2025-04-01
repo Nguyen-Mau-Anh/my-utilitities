@@ -1,54 +1,62 @@
-# React + TypeScript + Vite
+# My Utilities
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
 
-Currently, two official plugins are available:
+My Utilities is a collection of utility tools designed to simplify various tasks, including URL parsing, password generation, JSON formatting, and SQL formatting. Built using React, TypeScript, and Electron, this project aims to provide a seamless and efficient user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How to Build, Start, or Install
 
-## Expanding the ESLint configuration
+To get started with My Utilities, follow these steps:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd my-utilities
+   ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+4. **Build the application:**
+   ```bash
+   npm run build
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+5. **Run the Electron app:**
+   ```bash
+   npm run electron
+   ```
+
+## Project Structure
+
+- **src/pages:** Contains individual tool pages like UrlParser, PasswordGenerator, JsonFormatter, and SqlFormatter.
+- **electron:** Manages the Electron desktop environment setup.
+- **public:** Contains static assets and the main HTML file.
+- **src/assets:** Stores images and other asset files.
+- **src/components:** Houses reusable React components.
+- **src/styles:** Contains global CSS variables and styles.
+
+## Explain Each Tool
+
+- **URL Parser:** Parses and analyzes URL components, displaying protocol, hostname, port, path, query string, and hash.
+- **Password Generator:** Generates secure passwords based on user-defined criteria.
+- **JSON Formatter:** Formats and beautifies JSON data for better readability.
+- **SQL Formatter:** Formats SQL queries to enhance readability and maintainability.
+
+## Technology Used
+
+- **React:** A JavaScript library for building user interfaces.
+- **TypeScript:** A typed superset of JavaScript that compiles to plain JavaScript.
+- **Electron:** A framework for building cross-platform desktop applications using web technologies.
+- **Vite:** A build tool that provides a fast development environment for modern web projects.
+- **CSS:** Used for styling the application.
+
+## Authors
+- Anh, Nguyen
